@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:learnings/pages/home_page.dart';
 import 'package:learnings/pages/login_page.dart';
 
@@ -16,13 +17,14 @@ double pi =3.142;
       //home: HomePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,),
+        primarySwatch: Colors.deepPurple,
+      fontFamily: GoogleFonts.lato().fontFamily,),
       darkTheme: ThemeData(
         brightness: Brightness.dark
       ),
       initialRoute: "/home",
       routes: {
-        "/home": (context)=>HomePage(),
+        "/home": (context)=>LoginPage(),
         "/login": (context)=>LoginPage(),
       },
     );
