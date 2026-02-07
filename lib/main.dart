@@ -23,9 +23,9 @@ double pi =3.142;
       darkTheme: ThemeData(
         brightness: Brightness.dark
       ),
-      initialRoute: "/home",
+      initialRoute: MyRoutes.LoginRoute,
       routes: {
-        "/": (context)=>LoginPage(),
+        "/": (context)=>HomePage(),
         MyRoutes.HomeRoute: (context)=>HomePage(),
         MyRoutes.LoginRoute: (context)=>LoginPage(),
       },
