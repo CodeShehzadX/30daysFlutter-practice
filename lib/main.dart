@@ -3,31 +3,28 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:learnings/pages/home_page.dart';
 import 'package:learnings/pages/login_page.dart';
 import 'package:learnings/utils/routes.dart';
+import 'package:learnings/widgets/themes.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
-double pi =3.142;
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //home: HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      fontFamily: GoogleFonts.lato().fontFamily,),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark
-      ),
+      theme: MyTheme.lightTheme,
+      darkTheme: MyTheme.darkTheme,
+
       initialRoute: MyRoutes.HomeRoute,
       routes: {
-        "/": (context)=>HomePage(),
-        MyRoutes.HomeRoute: (context)=>HomePage(),
-        MyRoutes.LoginRoute: (context)=>LoginPage(),
+        "/": (context) => HomePage(),
+        MyRoutes.HomeRoute: (context) => HomePage(),
+        MyRoutes.LoginRoute: (context) => LoginPage(),
       },
     );
-  }}
+  }
+}

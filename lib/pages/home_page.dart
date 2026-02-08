@@ -8,8 +8,9 @@ import 'package:learnings/widgets/drawer.dart';
    @override
    Widget build(BuildContext context) {
      return Scaffold(
+       backgroundColor: Colors.white,
        appBar: AppBar(
-title: Text("catalog"),
+title: Text("catalog" , ),
        ),
        body: Center(
            child: Container(
