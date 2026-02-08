@@ -1,4 +1,5 @@
  import 'package:flutter/material.dart';
+import 'package:learnings/widgets/drawer.dart';
 
  class HomePage extends StatelessWidget {
    const HomePage({super.key});
@@ -15,6 +16,7 @@ title: Text("catalog"),
              child: Text("$days days flutter challenge of $name."),
            )
        ),
+       drawer: MyDrawer(),
      );
    }
  }
