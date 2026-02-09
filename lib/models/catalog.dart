@@ -1,7 +1,5 @@
 class CatalogModel {
-  static final items = [
-    Item(id: 1, name: "Laptop", desc: "Macbook13 inch", price: 2345, color: "#33505a", imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc")
-  ];
+  static  List<Item>items=[];
 }
 
 
@@ -15,4 +13,24 @@ class Item{
   final String imageURL;
 
   Item({required this.id, required this.name, required this.desc, required this.price, required this.color, required this.imageURL});
+
+  factory Item.fromMap(Map<String,dynamic> map){
+    return Item(
+    id: map["id"]??0,
+    name : map["name"]??"",
+    desc : map["desc"]??"",
+    price : map["price"]??0,
+    color : map["color"]??"",
+      imageURL : map["imageURL"]??"".toString().trim(),
+    );
+  }
+  toMap()=> {
+    "id": id,
+    "name": name,
+    "desc": desc,
+    "price": price,
+    "color": color,
+    "imageURL": imageURL,
+  };
+
 }
