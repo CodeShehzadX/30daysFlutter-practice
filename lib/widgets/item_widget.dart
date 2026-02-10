@@ -14,7 +14,10 @@ class ItemWidget extends StatelessWidget {
         onTap: (){
           print("Item ${item.id} clicked");
         },
-        leading: Image.network(item.imageURL),
+        leading: Image.network(item.imageURL,width: 50,
+          height: 50,
+          fit: BoxFit.cover,
+        ),
 
 
         title: Text(item.name) ,
