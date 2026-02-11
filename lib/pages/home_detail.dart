@@ -28,7 +28,7 @@ class HomeDetailPage extends StatelessWidget {
                 shape: StadiumBorder(),
               ),
               child: "Add to Cart".text.xl.white.make(),
-            ).wh(150, 50),
+            ).wh(140, 50),
           ],
         ).p32(),
       ),
