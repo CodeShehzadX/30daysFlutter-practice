@@ -62,7 +62,7 @@ class MyTheme {
       elevation: 0.0,
       iconTheme: IconThemeData(color: Colors.white),
       titleTextStyle: TextStyle(
-        color: Colors.black,
+        color: Colors.white,
         fontSize: 20,
         fontWeight: FontWeight.w600,
       ),
