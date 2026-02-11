@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
     );
     final decodedData = jsonDecode(CatalogJSON);
     final productData = decodedData["products"];
-    //final productData = decodedData["products"];
+    //final productData = decod edData["products"];
     print("Total products: ${productData.length}");
 
     CatalogModel.items = List.from(
@@ -45,11 +45,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(onPressed: (){
         Navigator.pushNamed(context, MyRoutes.CartRoute);
       },
-        backgroundColor: MyTheme.darkBlue,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         child: Icon(CupertinoIcons.cart,color: Colors.white,),
       ),
       body: SafeArea(

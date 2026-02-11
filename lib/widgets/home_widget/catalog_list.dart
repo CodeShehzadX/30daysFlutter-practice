@@ -50,7 +50,7 @@ class CatalogItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                catalog.name.text.lg.color(MyTheme.darkBlue).make(),
+                catalog.name.text.lg.color(context.theme.colorScheme.secondary,).make(),
                 catalog.desc.text.textStyle(context.captionStyle).make(),
                 10.heightBox,
                 Padding(
@@ -79,7 +79,7 @@ class CatalogItem extends StatelessWidget {
           ]),
 
     )
-        .white
+        .color(context.cardColor)
         .roundedLg
         .square(150)
         .alignCenterLeft

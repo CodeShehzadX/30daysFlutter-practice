@@ -13,9 +13,9 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.transparent),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: OverflowBar(
           alignment: MainAxisAlignment.spaceBetween,
 
@@ -27,8 +27,8 @@ class HomeDetailPage extends StatelessWidget {
                 backgroundColor: MyTheme.darkBlue,
                 shape: StadiumBorder(),
               ),
-              child: "Add to Cart".text.xl.white.make(),
-            ).wh(140, 50),
+              child: "Add to Cart".text.xl.color(context.theme.colorScheme.secondary,).make(),
+            ).wh(150, 50),
           ],
         ).p32(),
       ),
@@ -46,16 +46,19 @@ class HomeDetailPage extends StatelessWidget {
                 arcType: VxArcType.convey,
                 edge: VxEdge.top,
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   child: Column(
                     children: [
-                      catalog.name.text.xl4.color(MyTheme.darkBlue).make(),
+                      catalog.name.text.xl4.color(context.theme.colorScheme.secondary,).make(),
                       catalog.desc.text.xl
                           .textStyle(context.captionStyle)
                           .make(),
                       10.heightBox,
-                      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolo"
+                      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, "
+                          "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, "
+                          "sed diam voluptua."
+                          " At vero eos et accusam et justo duo dolo"
                           .text.textStyle(context.captionStyle)
                           .make().p16()
                     ],
